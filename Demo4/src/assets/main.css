@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    margin:0;
+    padding:0;
+}
+#app{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+/** Put colors here so you dont have to keep looking up*/
+:root{
+    --light-neutral-color:#e9eded;
+    --light-beige-color:#d3c1a4;
+    --dark-neutral-color:#1e4b4a;
+    --dark-brown-color:#996c45;
+
+}
