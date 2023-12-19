@@ -7,41 +7,50 @@ import GalleryView from './views/GalleryView.vue'
 import ContactView from './views/ContactView.vue'
 
 const showMobileNavigation = ref(false);
-const changeMobileNav = () =>{
+const changeMobileNav = () => {
   showMobileNavigation.value = !showMobileNavigation.value;
   console.log("Hello");
 }
 </script>
 
 <template>
+  <mobile-navigation v-if="showMobileNavigation">
+    <v-icon @click="changeMobileNav()" fill="black" class="mobile-nav-button" name="bi-x-square" scale="2"></v-icon>
+    <mobile-nav-box>
+      <router-link @click="changeMobileNav()" :to="{ hash: '#home' }">Home</router-link>
+      <router-link @click="changeMobileNav()" :to="{ hash: '#about' }">About</router-link>
+      <router-link @click="changeMobileNav()" :to="{ hash: '#gallery' }">Gallery</router-link>
+      <router-link @click="changeMobileNav()" :to="{ hash: '#contact' }">Contact</router-link> 
+    </mobile-nav-box>
+
+  </mobile-navigation>
+  <root v-if="!showMobileNavigation">
     <HomeView id="home"></HomeView>
-  <AboutView id="about"></AboutView>
-  <GalleryView id="gallery"></GalleryView>
-  <ContactView id="contact"></ContactView>
+    <AboutView id="about"></AboutView>
+    <GalleryView id="gallery"></GalleryView>
+    <ContactView id="contact"></ContactView>
 
-  <div class="header">
-    <header-left-box>
-      <header-icon>
-      <img class="header-image" src="./assets/duck.png">
-    </header-icon>
-    <header-text>
-      Duckweed Marketing
-    </header-text>
-    </header-left-box>
-    <mobile-header-text>
-      Duckweed <br>Marketing
-    </mobile-header-text>
-
-    <v-icon @click="changeMobileNav()" class="mobile-nav-button" name="oi-three-bars" scale="3"></v-icon>
-    <div class="nav">
-      <router-link :to="{ hash: '#home' }">Home</router-link>
-      <router-link :to="{ hash: '#about' }">About</router-link>
-      <router-link :to="{ hash: '#gallery' }">Gallery</router-link>
-      <router-link :to="{ hash: '#contact' }">Contact</router-link>
+    <div class="header">
+      <header-left-box>
+        <header-icon>
+          <img class="header-image" src="./assets/duck.png">
+        </header-icon>
+        <header-text>
+          Duckweed Marketing
+        </header-text>
+      </header-left-box>
+      <mobile-header-text>
+        Duckweed <br>Marketing
+      </mobile-header-text>
+      <v-icon @click="changeMobileNav()" class="mobile-nav-button" name="oi-three-bars" scale="2"></v-icon>
+      <div class="nav">
+        <router-link :to="{ hash: '#home' }">Home</router-link>
+        <router-link :to="{ hash: '#about' }">About</router-link>
+        <router-link :to="{ hash: '#gallery' }">Gallery</router-link>
+        <router-link :to="{ hash: '#contact' }">Contact</router-link>
+      </div>
     </div>
-  </div>
-
-  
+  </root>
 </template>
 
 <style>
@@ -54,6 +63,9 @@ const changeMobileNav = () =>{
   align-items: center;
   justify-content: space-evenly;
   width: 30%;
+}
+root{
+  width: 100%;
 }
 
 /**Desktop */
@@ -72,7 +84,8 @@ const changeMobileNav = () =>{
 
     background-color: var(--dark-neutral-color);
   }
-  header-icon{
+
+  header-icon {
     height: 90%;
     width: 20%;
     display: flex;
@@ -80,34 +93,41 @@ const changeMobileNav = () =>{
     align-items: center;
     justify-content: center;
   }
-  .header-image{
+
+  .header-image {
     width: 70%;
   }
-  header-left-box{
+
+  header-left-box {
     width: 40%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
   }
-  header-text{
-    font-size:35px;
+
+  header-text {
+    font-size: 35px;
     color: white;
   }
-  .nav a{
+
+  .nav a {
     text-decoration: none;
     color: white;
     transition: color .6s ease;
 
   }
-  .nav a:hover{
+
+  .nav a:hover {
     color: var(--light-beige-color);
   }
-  .mobile-nav-button{
+
+  .mobile-nav-button {
     scale: 0;
   }
-  mobile-header-text{
+
+  mobile-header-text {
     display: none;
   }
 
@@ -125,36 +145,71 @@ const changeMobileNav = () =>{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+
     background-color: var(--dark-neutral-color);
   }
-  header-icon{
-    height: 90%;
-    width: 20%;
-  }
-  .header-image{
+
+  header-icon {
     width: 100%;
   }
-  header-left-box{
-    width: 30%;
-    height: 100%;
+
+  .header-image {
+    width: 100%;
+  }
+
+  header-left-box {
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    display: none;
   }
-  header-text{
-    font-size:25px;
-    color: white;
-  }
-  .nav a{
-    text-decoration: none;
-    color: white;
-    transition: color .6s ease;
 
+  header-text {
+    font-size: 35px;
+    color: white;
   }
-  .nav a:hover{
-    color: var(--light-beige-color);
+
+  .nav {
+    display: none;
+  }
+
+  mobile-header-text {
+    font-size: 35px;
+    color: white;
+  }
+
+  mobile-navigation {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-beige-color);
+    position: fixed;
+    z-index: 0;
+  }
+  mobile-nav-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+    width: 100%;
+  }
+  mobile-nav-box a{
+    color: white;
+    text-decoration: none;
+    font-size:40px;
+  }
+
+  .mobile-nav-button {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -174,36 +229,68 @@ const changeMobileNav = () =>{
 
     background-color: var(--dark-neutral-color);
   }
-  header-icon{
+
+  header-icon {
     width: 100%;
   }
-  .header-image{
+
+  .header-image {
     width: 100%;
   }
-  header-left-box{
+
+  header-left-box {
     width: 90%;
     height: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    display:none;
-  }
-  header-text{
-    font-size:35px;
-    color: white;
-  }
-  .nav{
     display: none;
   }
-  mobile-header-text{
-    font-size:35px;
+
+  header-text {
+    font-size: 35px;
     color: white;
   }
-  mobile-navigation{
+
+  .nav {
+    display: none;
+  }
+
+  mobile-header-text {
+    font-size: 35px;
+    color: white;
+  }
+
+  mobile-navigation {
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: var(--light-beige-color);
+    position: fixed;
+    z-index: 0;
   }
+  mobile-nav-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+    width: 100%;
+  }
+  mobile-nav-box a{
+    color: white;
+    text-decoration: none;
+    font-size:40px;
+  }
+
+  .mobile-nav-button {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  
 }
 </style>

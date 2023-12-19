@@ -5,13 +5,15 @@ import App from './App.vue'
 import router from './router'
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { BiFacebook,
-    OiThreeBars
+    OiThreeBars,
+    BiXSquare
 
 } from "oh-vue-icons/icons";
 
 const app = createApp(App)
 addIcons(OiThreeBars,
-        BiFacebook
+        BiFacebook,
+        BiXSquare
     
     );
 app.use(router)

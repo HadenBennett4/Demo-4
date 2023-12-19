@@ -22,11 +22,27 @@
   }
   /**Tablet */
   @media (min-width: 480px) and (max-width:1023px){
-  
+    contact {
+      width: 100%;
+      height: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+    }
   }
   /**Mobile */
   @media (min-width: 0px) and (max-width:479px){
-  
+    contact {
+      width: 100%;
+      height: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+    }
   }
   </style>
   
