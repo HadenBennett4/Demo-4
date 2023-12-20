@@ -42,7 +42,7 @@
   .home-image {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);  
   }
 
   box1 {
@@ -68,6 +68,7 @@
   }
   paragraph{
     font-size:20px;
+    line-height:130%;
   }
   .learn-more-button{
     width:25%;

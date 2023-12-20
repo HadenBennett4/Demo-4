@@ -5,6 +5,7 @@ import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import GalleryView from './views/GalleryView.vue'
 import ContactView from './views/ContactView.vue'
+import InfoView from './views/InfoView.vue'
 
 const showMobileNavigation = ref(false);
 const changeMobileNav = () => {
@@ -19,6 +20,7 @@ const changeMobileNav = () => {
     <mobile-nav-box>
       <router-link @click="changeMobileNav()" :to="{ hash: '#home' }">Home</router-link>
       <router-link @click="changeMobileNav()" :to="{ hash: '#about' }">About</router-link>
+      <router-link @click="changeMobileNav()" :to="{ hash: '#info' }">Info</router-link>
       <router-link @click="changeMobileNav()" :to="{ hash: '#gallery' }">Gallery</router-link>
       <router-link @click="changeMobileNav()" :to="{ hash: '#contact' }">Contact</router-link> 
     </mobile-nav-box>
@@ -27,6 +29,7 @@ const changeMobileNav = () => {
   <root v-if="!showMobileNavigation">
     <HomeView id="home"></HomeView>
     <AboutView id="about"></AboutView>
+    <InfoView id="info"></InfoView>
     <GalleryView id="gallery"></GalleryView>
     <ContactView id="contact"></ContactView>
 

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import GalleryView from '../views/GalleryView.vue'
 import ContactView from '../views/ContactView.vue'
+import InfoView from '../views/InfoView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       name:'contact',
       component:ContactView,
     },
+    {
+      path:'/info',
+      name:'info',
+      component:InfoView
+    }
   ],
   scrollBehavior(to, from,savedPosition){
     if(to.hash){
