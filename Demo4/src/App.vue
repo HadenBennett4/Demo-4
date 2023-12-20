@@ -81,7 +81,7 @@ root{
     position: fixed;
     top: 0;
     left: 0;
-
+    box-shadow: 0 6px 4px 0 rgba(30,75,74,0.5);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -239,6 +239,7 @@ root{
     justify-content: center;
 
     background-color: var(--dark-neutral-color);
+
   }
 
   header-icon {
