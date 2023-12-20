@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

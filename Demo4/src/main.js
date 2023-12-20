@@ -6,14 +6,20 @@ import router from './router'
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { BiFacebook,
     OiThreeBars,
-    BiXSquare
+    BiXSquare,
+    BiInstagram,
+    CoTwitter,
+    FaTwitter
 
 } from "oh-vue-icons/icons";
 
 const app = createApp(App)
 addIcons(OiThreeBars,
         BiFacebook,
-        BiXSquare
+        BiXSquare,
+        BiInstagram,
+        CoTwitter,
+        FaTwitter
     
     );
 app.use(router)

@@ -4,8 +4,6 @@ const WEB3FORMS_ACCESS_KEY = "88af7c4b-f36a-4f79-a8ae-b8b6c2f053b4";
 const firstName = ref("");
 const lastName = ref("");
 const email = ref("");
-const message = ref("");
-const successMessage = "Your Submission Was Successful!";
 const showMessage = ref(false);
 
 const submitForm = async () => {
@@ -37,7 +35,7 @@ const submitForm = async () => {
 };
 function showSuccessMessage() {
   showMessage.value = true;
-  fistName.value = '';
+  firstName.value = '';
   lastName.value = '';
   message.value = '';
   email.value = '';
@@ -50,7 +48,7 @@ function showSuccessMessage() {
     <contact-container>
       <header>Contact Us!!</header>
       <paragraph></paragraph>
-      <form>
+      <form @submit.prevent="submitForm">
         <name-container>
           <name-child1>
             <form-text>First Name</form-text>
@@ -68,9 +66,12 @@ function showSuccessMessage() {
           <form-text>Message</form-text>
           <input class="input3" type="text" name="message" placeholder="Message" v-model="message" input required>
         </email-container>
-
+        <button type="submit" class="submit-button"> Submit</button>
       </form>
     </contact-container>
+    <success v-if="showMessage===true">
+      Your submission was succesfull
+    </success>
   </contact>
 </template>
   
@@ -86,17 +87,22 @@ function showSuccessMessage() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--light-gray-color);
+  }
+  header{
+    font-size: 80px;
+    color: black;
+    font-weight:bolder;
   }
 
   contact-container {
     width: 50%;
-    height: 80%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   form {
@@ -113,20 +119,18 @@ function showSuccessMessage() {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     height: 25%;
-    background-color: red;
   }
 
   email-container {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 75%;
-    background-color: aquamarine;
   }
 
   form-text {
@@ -135,29 +139,53 @@ function showSuccessMessage() {
   }
  
   .input1 {
-    width: 80%;
+    width: 100%;
     height: 30%;
   }
   .input2{
     width: 100%;
-    height: 20%;
+    height: 10%;
   }
-  input3{
+  .input3{
     width:100%;
-    height: 80%;
+    height: 5%;
+    text-align: left;
+    vertical-align: top;
+    padding-bottom:30%;
+  }
+  .input3::placeholder{
   }
   name-child1{
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-
-    width: 50%;
+    width: 45%;
     height: 100%;
-
+  }
+  .submit-button{
+    width:100%;
+    height: 10%;
+    font-size: 20px;
+    border-style:none;
+    border-radius:10px;
+    color: var(--light-neutral-color);
+    background-color: var(--dark-neutral-color);
+    transition:background-color, .7s ease,color .2s ease-in,color .1s ease-out;
+  }
+  .submit-button:hover{
+    background-color: var( --light-beige-color);
+  }
+  .learn-more-button:active{
+    transform: scale(1.05);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    color: var(--dark-neutral-color);
+  }
+  success{
+    font-size: 30px;
+    color: black;
   }
 
-  .input2 {}
 }
 
 /**Tablet */

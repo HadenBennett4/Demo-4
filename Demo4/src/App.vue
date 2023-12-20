@@ -6,6 +6,7 @@ import AboutView from './views/AboutView.vue'
 import GalleryView from './views/GalleryView.vue'
 import ContactView from './views/ContactView.vue'
 import InfoView from './views/InfoView.vue'
+import FooterView from './views/footerView.vue'
 
 const showMobileNavigation = ref(false);
 const changeMobileNav = () => {
@@ -32,6 +33,7 @@ const changeMobileNav = () => {
     <InfoView id="info"></InfoView>
     <GalleryView id="gallery"></GalleryView>
     <ContactView id="contact"></ContactView>
+    <FooterView id="footer"></FooterView>
 
     <div class="header">
       <header-left-box>
