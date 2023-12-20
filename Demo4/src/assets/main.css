@@ -16,7 +16,7 @@ body{
 :root{
     --light-neutral-color:#e9eded;
     --light-beige-color:#d3c1a4;
-    --dark-neutral-color:#1e4b4a;
+    --dark-neutral-color:rgb(30, 75, 74);
     --dark-brown-color:#996c45;
     --light-gray-color:#F1EEE4;
 
