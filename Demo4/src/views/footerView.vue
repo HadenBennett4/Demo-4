@@ -10,9 +10,9 @@ import GoogleMap from '../components/GoogleMap.vue'
         <the-footer>
           <footer-container>
             <icon-box>
-            <v-icon name="bi-facebook" fill="white" scale="2"></v-icon>
-            <v-icon name="bi-instagram" fill="white" scale="2"></v-icon>
-            <v-icon name="fa-twitter" fill="white" scale="2"></v-icon>
+            <a href="https://www.duckweedmarketing.com" target="_blank"><v-icon name="bi-facebook" fill="white" scale="2"></v-icon></a>
+            <a href="https://www.duckweedmarketing.com" target="_blank"><v-icon name="bi-instagram" fill="white" scale="2"></v-icon></a>
+            <a href="https://www.duckweedmarketing.com" target="_blank"><v-icon name="fa-twitter" fill="white" scale="2"></v-icon></a>
           </icon-box>
           <footer-text>
             A Duckweed Website
@@ -36,7 +36,7 @@ import GoogleMap from '../components/GoogleMap.vue'
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      background-color: blanchedalmond;
+      background-color:var(--light-gray-color);
     }
     the-map{
       width:80%;
@@ -78,24 +78,94 @@ import GoogleMap from '../components/GoogleMap.vue'
   @media (min-width: 480px) and (max-width:1023px){
     footer {
       width: 100%;
-      height: 900px;
+      height: 1000px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: start;
+      background-color:var(--light-gray-color);
+    }
+    the-map{
+      width:90%;
+      height: 35%;
+      margin-top:70px;
+      margin-bottom: 20px;
+    }
+    the-footer{
+      width:100%;
+      height: 30%;
+      background-color: #0B1D1D;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      background-color: antiquewhite;
+    }
+    footer-container{
+      height:50%;
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    icon-box{
+      height: 40%;
+      width: 25%;
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    footer-text{
+      color:white;
+      font-size:20px;
     }
   }
   /**Mobile */
   @media (min-width: 0px) and (max-width:479px){
     footer {
       width: 100%;
-      height: 900px;
+      height: 500px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: start;
+      background-color:var(--light-gray-color);
+    }
+    the-map{
+      width:90%;
+      height: 35%;
+      margin-top:70px;
+      margin-bottom: 20px;
+    }
+    the-footer{
+      width:100%;
+      height: 50%;
+      background-color: #0B1D1D;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      background-color: antiquewhite;
+    }
+    footer-container{
+      height:50%;
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    icon-box{
+      height: 40%;
+      width: 25%;
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    footer-text{
+      color:white;
+      font-size:20px;
     }
   }
   </style>

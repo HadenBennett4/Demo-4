@@ -47,7 +47,7 @@ const changeMobileNav = () => {
       <mobile-header-text>
         Duckweed <br>Marketing
       </mobile-header-text>
-      <v-icon @click="changeMobileNav()" class="mobile-nav-button" name="oi-three-bars" scale="2"></v-icon>
+      <v-icon @click="changeMobileNav()" class="mobile-nav-button" name="oi-three-bars" scale="3"></v-icon>
       <div class="nav">
         <router-link :to="{ hash: '#home' }">Home</router-link>
         <router-link :to="{ hash: '#about' }">About</router-link>
@@ -151,6 +151,7 @@ root{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    z-index:2;
 
     background-color: var(--dark-neutral-color);
   }
@@ -193,14 +194,18 @@ root{
     background-color: var(--light-beige-color);
     position: fixed;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
   }
   mobile-nav-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 90%;
-    width: 100%;
+    height: 70%;
+    width: 90%;
   }
   mobile-nav-box a{
     color: white;
@@ -213,8 +218,8 @@ root{
     position: fixed;
     top: 0;
     right: 0;
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 4%;
+    margin-right: 3%;
   }
 }
 
@@ -222,15 +227,16 @@ root{
 @media (min-width: 0px) and (max-width:479px) {
   .header {
     width: 100%;
-    height: 100px;
+    height: 150px;
     position: fixed;
     top: 0;
     left: 0;
+    z-index:2;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
     background-color: var(--dark-neutral-color);
   }
@@ -263,7 +269,7 @@ root{
   }
 
   mobile-header-text {
-    font-size: 35px;
+    font-size: 40px;
     color: white;
   }
 
@@ -293,8 +299,8 @@ root{
     position: fixed;
     top: 0;
     right: 0;
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 6%;
+    margin-right: 3%;
   }
   
 }

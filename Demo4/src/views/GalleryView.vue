@@ -25,8 +25,8 @@
         <image>
           <img src="../assets/Pic11.png" class="im">
         </image>
-        <image>
-          <img src="../assets/Pic12.png" class="im">
+        <image id="extra-image">
+          <img src="../assets/Pic12.png" class="im" >
         </image>
       </gallery-box>
     </gallery>
@@ -72,24 +72,72 @@
   @media (min-width: 480px) and (max-width:1023px){
     gallery {
       width: 100%;
-      height: 900px;
+      height: 1400px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      align-content: space-evenly;
       justify-content: center;
-      background-color: blue;
+      background-color: var(--light-neutral-color);
+    }
+    #extra-image{
+      display:none;
+    }
+    gallery-box{
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    image{
+      width:40%;
+      height: 22%;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      margin-top:5px;
+    }
+    .im{
+      width: 100%;
+      border-radius: 20px;
     }
   }
   /**Mobile */
   @media (min-width: 0px) and (max-width:479px){
     gallery {
       width: 100%;
-      height: 900px;
+      height: 650px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      align-content: space-evenly;
       justify-content: center;
-      background-color: blue;
+      background-color: var(--light-neutral-color);
+    }
+    #extra-image{
+      display:none;
+    }
+    gallery-box{
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    image{
+      width:40%;
+      height: 22%;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      margin-top:5px;
+    }
+    .im{
+      width: 100%;
+      border-radius: 20px;
     }
   }
   </style>

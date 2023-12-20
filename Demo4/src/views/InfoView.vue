@@ -129,12 +129,76 @@ const changeParagraph3 = () => {
 @media (min-width: 480px) and (max-width:1023px) {
     info {
         width: 100%;
-        height: 900px;
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: red;
+        background-color: var(--light-gray-color);
+    }
+    box1 {
+        width: 90%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    button{
+        border-style: none;
+        width: 90%;
+        height: 29%;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .9);
+        transition:box-shadow .7s ease;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .button1{
+        background-image: url('../assets/Pic1.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button1:hover{
+        transform: scale(1.02);
+    }
+    .button1:active{
+        transform: scale(1.05);
+    }
+
+    .button2{
+        background-image: url('../assets/Pic2.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button2:hover{
+        transform: scale(1.02);
+    }
+    .button2:active{
+        transform: scale(1.05);
+    }
+    .button3{
+        background-image: url('../assets/Pic3.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button3:hover{
+        transform: scale(1.02);
+    }
+    .button3:active{
+        transform: scale(1.05);
+    }
+
+    header{
+        font-size:50px;
+        color: var(--light-neutral-color);
+    }
+    paragraph{
+        font-size:20px;
+        color: var(--light-neutral-color);
     }
 }
 
@@ -142,12 +206,76 @@ const changeParagraph3 = () => {
 @media (min-width: 0px) and (max-width:479px) {
     info {
         width: 100%;
-        height: 900px;
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: red;
+        background-color: var(--light-gray-color);
+    }
+    box1 {
+        width: 90%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    button{
+        border-style: none;
+        width: 90%;
+        height: 29%;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .9);
+        transition:box-shadow .7s ease;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .button1{
+        background-image: url('../assets/Pic1.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button1:hover{
+        transform: scale(1.02);
+    }
+    .button1:active{
+        transform: scale(1.05);
+    }
+
+    .button2{
+        background-image: url('../assets/Pic2.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button2:hover{
+        transform: scale(1.02);
+    }
+    .button2:active{
+        transform: scale(1.05);
+    }
+    .button3{
+        background-image: url('../assets/Pic3.png');
+        background-size: cover;
+        transition: transform .5s ease, transform .4s ease;
+    }
+    .button3:hover{
+        transform: scale(1.02);
+    }
+    .button3:active{
+        transform: scale(1.05);
+    }
+
+    header{
+        font-size:50px;
+        color: var(--light-neutral-color);
+    }
+    paragraph{
+        font-size:20px;
+        color: var(--light-neutral-color);
     }
 }</style>
   
