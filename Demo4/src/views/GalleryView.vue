@@ -51,28 +51,30 @@
     gallery-box{
       width: 90%;
       height: 90%;
-      display: flex;
-      flex-direction:row;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:2em;
     }
     image{
-      width:28%;
-      height: 30%;
+      width:100%;
+      height: 100%;
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      background-color: aqua;
     }
     .im{
       height: 100%;
+      width: 100%;
+      object-fit: cover;
       border-radius: 20px;
+
     }
   }
   /**Tablet */
   @media (min-width: 480px) and (max-width:1023px){
     gallery {
       width: 100%;
-      height: 1400px;
+      height: 100em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -86,21 +88,21 @@
     gallery-box{
       width: 90%;
       height: 90%;
-      display: flex;
-      flex-direction:column;
-      align-items: center;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
     }
     image{
-      width:40%;
-      height: 22%;
+      width:100%;
+      height: 100%;
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
       margin-top:5px;
     }
     .im{
       width: 100%;
+      height:100%;
+      object-fit: cover;
       border-radius: 20px;
     }
   }
@@ -108,7 +110,7 @@
   @media (min-width: 0px) and (max-width:479px){
     gallery {
       width: 100%;
-      height: 650px;
+      height: 160em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -122,21 +124,20 @@
     gallery-box{
       width: 90%;
       height: 90%;
-      display: flex;
-      flex-direction:column;
-      align-items: center;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
     }
     image{
-      width:40%;
-      height: 22%;
+      width:100%;
+      height: 100%;
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-      margin-top:5px;
     }
     .im{
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 20px;
     }
   }

@@ -270,12 +270,13 @@ const changeParagraph3 = () => {
     }
 
     header{
-        font-size:50px;
+        font-size:30px;
         color: var(--light-neutral-color);
     }
     paragraph{
-        font-size:20px;
+        font-size:15px;
         color: var(--light-neutral-color);
+        width: 80%;
     }
 }</style>
   

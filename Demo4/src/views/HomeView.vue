@@ -242,8 +242,7 @@
     line-height:130%;
   }
   .learn-more-button{
-    width:30%;
-    height: 10%;
+    padding: .5em;
     border-style:none;
     border-radius: 10px;
     color: var(--light-neutral-color);
